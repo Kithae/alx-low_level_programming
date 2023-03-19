@@ -1,5 +1,14 @@
-#include<stdio.h>
-/*print function*/
+#include <stdio.h>
+
+/*
+ * main - Entry point
+ *
+ * Description: 'the program's uses printf function'
+ * @parameter: describe the parameter
+ *
+ * Return: Always 0 (Success)
+ */
+
 int main(void)
 {
 	printf("with proper grammar, but the outcome is a piece of art,\n");
