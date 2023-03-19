@@ -1,6 +1,5 @@
-/*print function*/
 #include<stdio.h>
-
+/*print function*/
 int main(void)
 {
 	printf("with proper grammar, but the outcome is a piece of art,\n");
