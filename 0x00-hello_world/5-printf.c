@@ -4,7 +4,6 @@
  * main - Entry point
  *
  * Description: 'the program's uses printf function'
- * @parameter: describe the parameter
  *
  * Return: Always 0 (Success)
  */
