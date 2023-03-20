@@ -3,11 +3,9 @@
 #include <stdio.h>
 
 /**
-*main - generates random numbers
+*main - The program determines if number is positive, negative or zero.
 *
-*The program determines if number is positive, negative or zero.
-*
-*return: always 0 (success)
+*return: Always 0 (Success)
 */
 int main(void)
 {
