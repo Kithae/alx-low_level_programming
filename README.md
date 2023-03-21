@@ -1,1 +1,1 @@
-This directory holds C - Debugging tasks
+This repository hosts C programming projects
