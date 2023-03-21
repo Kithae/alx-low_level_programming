@@ -1,1 +1,1 @@
-Hello world. This Repo hosts My C programming projects
+This directory holds C - Debugging tasks
