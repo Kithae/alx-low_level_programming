@@ -9,10 +9,11 @@
 
 void print_numbers(void)
 {
-char i;
-for (i = 'o'; i <= '9'; i++)
+int num = 0;
+while (num < 10)
 {
-putchar (i);
+putchar ('0' + num);
+num++;
 }
 putchar('\n');
 
