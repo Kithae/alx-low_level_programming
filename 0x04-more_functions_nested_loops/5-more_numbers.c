@@ -10,19 +10,18 @@
 
 void more_numbers(void)
 {
-	int i;
-	int num = 0;
+char ch;
+int num = 0;
 
-	for (i = 0 ; i < 10 ; i++)
-	{
-		while (num < 15)
+while (num <= 14)
+{
+	ch = 'a';
+		while (ch <= 'z')
 		{
-			if (num > 9)
-				_putchar('0' + num / 10);
-			_putchar('0' + num % 10);
-			num++;
+			_putchar(ch);
+				ch++;
 		}
-		num = 0;
-		_putchar('\n');
-	}
+			_putchar('\n');
+			num++;
+}
 }
