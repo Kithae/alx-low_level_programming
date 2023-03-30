@@ -1,12 +1,13 @@
 #include "main.h"
 /**
- * _strcat – a function that concatenates two strings
+ * _strncat -  a function that concatenates two strings
  * @dest: The destination string
  * @src: The string to append (source)
+ * @n: maximum space value
  *
  * Return: a pointer to the destination string
  */
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	int i;
 	int j;
@@ -17,13 +18,12 @@ char *_strcat(char *dest, char *src)
 		i++;
 	}
 	j = 0;
-	while (src[j] != '\0')
+	while (j < n && src[j] != '\0')
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+	dest[i] = src[j];
+	i++;
+	j++;
 	}
-
 	dest[i] = '\0';
 	return (dest);
 }
