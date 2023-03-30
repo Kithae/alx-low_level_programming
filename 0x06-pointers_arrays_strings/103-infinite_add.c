@@ -1,6 +1,33 @@
 #include "main.h"
 
 /**
+ * rev_string - a function that adds two numbers
+ * infinite_add – a function that adds 2 numbers together
+ * @n: the integer
+ * Return: 0 if result can’t be stored in r
+ */
+
+void rev_string(char *n)
+{
+	int i = 0;
+	int j = 0;
+	char temp;
+
+	while (*(n + i) != '\0')
+	{
+		i++;
+	}
+	i--;
+
+	for (j = 0; j < i; j++, i--)
+	{
+		temp = *(n + j);
+		*(n + j) = *(n + i);
+		*(n + i) = temp;
+	}
+}
+
+/**
  * infinite_add – a function that adds 2 numbers together
  * @n1: text representation of 1st number to add
  * @n2: text representation of 2nd number to add
