@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _ memcpy - a function that fills memory with a constant byte.
+ * _memcpy - a function that fills memory with a constant byte.
  * @dest: the destination memory area
  * @src: the source memory area
  * @n: the size of the memory to copy

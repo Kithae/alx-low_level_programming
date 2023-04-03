@@ -22,7 +22,7 @@ char *firstocc, *findneedle;
 			findneedle = needle;
 			while (*findneedle)
 			{
-				if (*haystack++ != * findneedle ++)
+				if (*haystack++ != *findneedle++)
 					haystack = firstocc;
 					break;
 				}
