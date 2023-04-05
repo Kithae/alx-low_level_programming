@@ -6,7 +6,7 @@
  * raised to the power of y.
  * @x: the integer
  * @y: the power factor
-* Return: -1 error, else the result
+* Return: -1 on  error, else the result
  */
 
 int _pow_recursion(int x, int y)
