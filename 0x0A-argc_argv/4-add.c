@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
-* main – a program that adds positive numbers.
+* main - a program that adds positive numbers.
 * @argc: the argument count
 * @argv: the arguments string
 *

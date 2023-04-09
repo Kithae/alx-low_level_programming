@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
-* main – A program that multiplies two numbers.
+* main - a program that multiplies two numbers.
 * @argc: the argument count
 * @argv: the arguments string
 *
