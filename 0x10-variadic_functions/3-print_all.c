@@ -8,12 +8,12 @@
 */
 void print_all(const char * const format, ...)
 {
-int a = 0;
-char *s, *sep = "";
+Int a = 0;
+char *str, *sep = "";
 
-va_list ls;
+va_list anything;
 
-va_start(ls, format);
+va_start(anything, format);
 
 if (format)
 {
@@ -22,19 +22,19 @@ while (format[a])
 switch (format[a])
 {
 case 'c':
-printf("%s%c", sep, va_arg(ls, int));
+printf("%s%c", sep, va_arg(anything, int));
 break;
-case 'a':
-printf("%s%d", sep, va_arg(ls, int));
+case 'i':
+printf("%s%d", sep, va_arg(anything, int));
 break;
 case 'f':
-printf("%s%f", sep, va_arg(ls, double));
+printf("%s%f", sep, va_arg(anything, double));
 break;
 case 's':
-s = va_arg(ls, char *);
-if (!s)
-s = "(nil)";
-printf("%s%s", sep, s);
+str = va_arg(anything, char *);
+if (!str)
+str = "(nil)";
+printf("%s%s", sep, str);
 break;
 default:
 a++;
@@ -46,5 +46,6 @@ a++;
 }
 
 printf("\n");
-va_end(ls);
+va_end(anything);
+}
 }
