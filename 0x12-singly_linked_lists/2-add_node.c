@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <stdlib.h>
+
 /**
 * add_node - a function that inserts new nodes infront of the list
 * @head: a linked list head.
@@ -8,21 +10,51 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-list_t *curr;
-size_t x;
+int tally = 0;
+	list_t *pt;
 
-new = malloc(sizeof(list_t));
-if (curr == NULL)
-return (NULL);
+	pt = malloc(sizeof(list_t));
+	if (pt == NULL)
+		return (NULL);
+	pt->str = _sp(str);
+	while (str[tally] != '\0')
+		tally++;
+	pt->len = tally;
+	pt->next = *head;
+	*head = pt;
+	return (pt);
+}
 
-curr->str = strdup(str);
+/**
+ * _sp - another memory allocation function
+ * @str: a string
+ *
+* Return: a pointer
+ */
+char *_sp(const char *str)
+{
+	int x, y;
+	char *p;
 
-for (x = 0; str[x]; x++)
-;
+	if (str == NULL)
+		return (NULL);
+	x = 0;
+	while (*(str + x) != '\0')
+	{
+		x++;
+	}
 
-curr->len = x;
-curr->next = *head;
-*head = curr;
+	p = malloc(sizeof(char) * x + 1);
 
-return (*head);
+	if (p == NULL)
+		return (NULL);
+
+	y = 0;
+	while (str[y] != '\0')
+	{
+		p[y] = str[y];
+		y++;
+	}
+	p[y] = '\0';
+	return (p);
 }
