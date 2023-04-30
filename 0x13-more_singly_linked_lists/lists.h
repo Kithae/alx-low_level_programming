@@ -18,6 +18,20 @@ int n;
 struct listint_s *next;
 } listint_t;
 
+/**
+* struct listp_s - a linked list
+
+* @p: a node pointer
+* @next: a next node pointer
+*
+*/
+
+typedef struct listp_s
+{
+void *p;
+struct listp_s *next;
+} listp_t;
+
 int _putchar(char c);
 size_t print_listint(const listint_t *h);
 size_t listint_len(const listint_t *h);
