@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 {
 int file_from, err_close, file_to;
 ssize_t tally, filewr;
-char buf[1024];
+char pbuffer[1024];
 
 if (argc != 3)
 {
@@ -47,10 +47,10 @@ error_file(file_from, file_to, argv);
 tally = 1024;
 while (tally == 1024)
 {
-tally = read(file_from, buf, 1024);
+tally = read(file_from, pbuffer, 1024);
 if (tally == -1)
 error_file(-1, 0, argv);
-filewr = write(file_to, buf, tally);
+filewr = write(file_to, pbuffer, tally);
 if (filewr == -1)
 error_file(0, -1, argv);
 }
