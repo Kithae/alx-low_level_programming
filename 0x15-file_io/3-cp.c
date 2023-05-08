@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
-* error_file – a function for checking file opening.
+* error_file - a function for checking file opening
 * @file_from: source file.
 * @file_to: destination file.
 * @argv: array.
@@ -23,14 +23,14 @@ exit(99);
 }
 
 /**
-* main – a function for checking student codes.
+* main - a function for checking student codes
 * @argc: total arguments.
 * @argv: array.
 * Return: 0.
 */
 int main(int argc, char *argv[])
 {
-int file_from, err_close, file_to;
+int file_from, stop_error, file_to;
 ssize_t tally, filewr;
 char pbuffer[1024];
 
@@ -55,15 +55,15 @@ if (filewr == -1)
 error_file(0, -1, argv);
 }
 
-err_close = close(file_from);
-if (err_close == -1)
+stop_error = close(file_from);
+if (stop_error == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 exit(100);
 }
 
-err_close = close(file_to);
-if (err_close == -1)
+stop_error = close(file_to);
+if (stop_error == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 exit(100);
